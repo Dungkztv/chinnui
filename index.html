@@ -108,17 +108,53 @@
 
 <body>
     <div id="child">
-    <div class="container">
-           <strong><h4>
-               💗I'M SORRYYY💗
-              <br>
-               💗MYWIFE💗
-           </h4></strong>
-    </div>
+        <div class="container">
+            <strong>
+                <h4>
+                    💗I'M SORRYYY💗<br>
+                    💗MYWIFE💗
+                </h4>
+            </strong>
+        </div>
     </div>
     <!--这里写名字❤！！！-->
     <canvas id="pinkboard"></canvas>
     <!-- <canvas id= "canvas"></canvas>  -->
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: black; /* Đặt nền đen */
+        }
+
+        #child {
+            text-align: center; /* Căn giữa nội dung bên trong */
+            z-index: 1; /* Đảm bảo nội dung nằm trên canvas */
+        }
+
+        h4 {
+            font-family: "STKaiti";
+            font-size: 40px;
+            color: #f584b7; /* Màu chữ hồng */
+            margin: 0; /* Bỏ margin mặc định */
+        }
+
+        canvas {
+            position: absolute; /* Để canvas nằm phía dưới */
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0; /* Canvas nằm dưới nội dung */
+        }
+    </style>
+
     <script>
         /*
        * Settings
@@ -132,7 +168,6 @@
                 size: 30, // particle size in pixels
             },
         };
-
         /*
          * RequestAnimationFrame polyfill by Erik Möller
          */
